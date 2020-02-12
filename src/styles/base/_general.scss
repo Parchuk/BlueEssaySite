@@ -1,0 +1,337 @@
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+article,
+section,
+aside,
+header,
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+// Typography
+h1 {
+    @include font($dl-3-4, $Poppins-Regular, 35px, 400);
+}
+
+h2 {
+    @include font ($dl-2-4, $Poppins-Medium, 33px, 500);
+
+    &:hover {
+        color: $base-light;
+        background-color: $primary-1;
+    }
+}
+
+h3 {
+    @include font ($dl-3-4, $Poppins-Medium, 27pt, 500);
+}
+
+h4 {
+    @include font ($dl-3-4, $Poppins-Medium, 22pt, 500);
+}
+
+h5 {
+    @include font ($dl-3-4, $Poppins-Medium, 17pt, 500);
+}
+
+h6 {
+    @include font ($dl-3-4, $Poppins-Medium, 15pt, 500);
+}
+
+p {
+    @include font($dl-1-4, $Poppins-Regular, 14px, 400);
+}
+
+.subtitle {
+    line-height: 30px;
+    @include font($dl-1-4, $Poppins-Medium, 20px, 500);
+
+    &:hover {
+        color: $base-light;
+        background-color: $primary-1;
+    }
+}
+
+.ul-done {
+    @include font ($dl-1-4, $Poppins-Medium, 15px, 500);
+    line-height: 22px;
+
+    li::before {
+        content: '\f058';
+        font-family: "Font Awesome 5 Free";
+        font-size: 18px;
+        font-weight: bold;
+        color: $primary-1;
+        margin-right: 10px;
+    }
+}
+
+.quotation {
+    line-height: 30px;
+    @include font($dl-1-1, $Poppins-Regular, 17px, 400);
+    border-left: 2px solid $primary-1;
+    background-color: $primary-5;
+    padding: 17px 59px 12px 33px;
+}
+
+input[type=text] {
+    @include font($dl-1-1, $Poppins-Regular, 13px, 400);
+    color: $primary-4;
+    width: 320px;
+    height: 50px;
+    border: 1px solid $li-2-4;
+    background-color: $primary-6;
+    border-radius: 5px;
+    padding-left: 20px;
+
+    &:hover {
+        background-color: $base-light;
+    }
+
+    &:focus {
+        box-shadow: inset 0 0 5px rgba(15, 139, 204, 0.4);
+        border: 1px solid $primary-1;
+        background-color: $base-light;
+    }
+}
+
+.checked {
+    width: 25px;
+    height: 25px;
+    border: 2px solid $li-2-4;
+    background-color: $base-light;
+
+    &:hover {
+        border: 2px solid $primary-1;
+    }
+
+    &:checked {
+        background-color: $primary-1;
+    }
+
+    &:disabled {
+        background-color: $li-2-4;
+    }
+}
+
+.radio{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid $li-2-4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span{
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        display: block;
+    }
+    &:hover{
+        border: 2px solid $primary-1;
+    }
+    &:checked {
+        span{
+            background-color:$primary-1;
+        }
+    }
+    &:disabled {
+    border: 2px solid $li-2-4;
+        span{
+            background-color:$li-2-4;
+        }
+    }
+}
+
+.btn-1 {
+    width: 220px;
+    padding: 13.5px 0;
+    border-radius: 5px;
+    background-color: $primary-2;
+    text-transform: uppercase;
+    @include font($base-light, $Poppins-SemiBold, 14px, 600);
+
+    &:hover {
+        background-color: $li-1-2;
+    }
+
+    &.disabled {
+        background-color: $li-2-4;
+    }
+}
+.btn-2 {
+    width: 280px;
+    padding: 13.5px 0;
+    border-radius: 5px;
+    background-color: $dl-1-1;
+    @include font ($base-light, $Poppins-Medium, 14px, 500);
+
+    &:hover {
+        background-color: $li-2-1;
+    }
+
+    &.disabled {
+        background-color: $li-2-4;
+    }
+}
+
+.btn-3 {
+    width: 201px;
+    padding: 13.5px 0;
+    border-radius: 5px;
+    background-color: $dl-1-1;
+    @include font ($base-light, $Poppins-Medium, 14px, 500);
+
+    &:hover {
+        background-color: $li-2-1;
+    }
+
+    &.disabled {
+        background-color: $li-2-4;
+    }
+}
+
+.btn-4 {
+    width: 220px;
+    padding: 13.5px 0;
+    border-radius: 5px;
+    background-color: $base-light;
+    @include font($primary-2, $Poppins-SemiBold, 14px, 600);
+    border: 1px solid $primary-2;
+    text-transform: uppercase;
+    &:hover {
+        background-color: $li-1-2;
+        color: $base-light;
+        border: none;
+    }
+
+    &.disabled {
+        background-color: $li-2-4;
+        border: none;
+    }
+}
+
+.btn-5 {
+    width: 201px;
+    padding: 13.5px 0;
+    border-radius: 5px;
+    background-color: $base-light;
+    @include font($dl-1-1, $Poppins-Medium, 14px, 500);
+    border: 1px solid $dl-1-1;
+    &:hover {
+        background-color: $li-2-1;
+        color: $base-light;
+        border: none;
+    }
+
+    &.disabled {
+        background-color: $li-2-4;
+        border: none;
+    }
+}
+
+.btn-1-mb {
+    width: 150px;
+    padding: 8.5px 0;
+    border-radius: 5px;
+    background-color: $primary-2;
+    text-transform: uppercase;
+    @include font($base-light, $Poppins-SemiBold, 14px, 600);
+
+    &:hover {
+        background-color: $li-1-2;
+    }
+
+    &.disabled {
+        background-color: $li-2-4;
+    }
+}
+.btn-2-mb {
+    width: 170px;
+    padding: 8.5px 0;
+    border-radius: 5px;
+    background-color: $dl-1-1;
+    @include font ($base-light, $Poppins-Medium, 14px, 500);
+
+    &:hover {
+        background-color: $li-2-1;
+    }
+
+    &.disabled {
+        background-color: $li-2-4;
+    }
+}
+
+.btn-3-mb {
+    width: 150px;
+    padding: 8.5px 0;
+    border-radius: 5px;
+    background-color: $dl-1-1;
+    @include font ($base-light, $Poppins-Medium, 14px, 500);
+
+    &:hover {
+        background-color: $li-2-1;
+    }
+
+    &.disabled {
+        background-color: $li-2-4;
+    }
+}
+
+.btn-4-mb {
+    width: 150px;
+    padding: 8.5px 0;
+    border-radius: 5px;
+    background-color: $base-light;
+    @include font($primary-2, $Poppins-SemiBold, 14px, 600);
+    border: 1px solid $primary-2;
+    text-transform: uppercase;
+    &:hover {
+        background-color: $li-1-2;
+        color: $base-light;
+        border: none;
+    }
+
+    &.disabled {
+        background-color: $li-2-4;
+        border: none;
+    }
+}
+
+.btn-5-mb {
+    width: 150px;
+    padding: 8.5px 0;
+    border-radius: 5px;
+    background-color: $base-light;
+    @include font($dl-1-1, $Poppins-Medium, 14px, 500);
+    border: 1px solid $dl-1-1;
+    &:hover {
+        background-color: $li-2-1;
+        color: $base-light;
+        border: none;
+    }
+
+    &.disabled {
+        background-color: $li-2-4;
+        border: none;
+    }
+}
