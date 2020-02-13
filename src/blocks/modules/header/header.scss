@@ -12,7 +12,7 @@ header .container-fluid {
             &>li {
                 position: relative;
                 .burger-btn {
-                    position: relative;
+                    z-index: 1;
                     width: 25px;
                     height: 3px;
                     background-color: $base-light;
@@ -45,12 +45,16 @@ header .container-fluid {
                 }
             }
             &>li:last-of-type label{
-                margin: 0;
-                min-height: 30px;
-                display: flex;
+             margin: 0;
+             min-height: 30px;
+             width: 30px;
+             display: flex;
              justify-content: center;
              align-items: center;
              cursor: pointer;
+             z-index: 2;
+             position: absolute;
+             top: -10px;
             }
             &> li:nth-of-type(1),
             &>li:nth-of-type(2) {
@@ -226,13 +230,8 @@ header .container-fluid {
         transition: all .5s ease-in-out;
     }
     input:checked ~ .dropdown{
-        top: 65px;
+        top: 35px;
         width: 160px;
-
     }
-    label{
-        position: relative;
-        z-index: 30;
-    }
-    
+   
 }
