@@ -23,7 +23,9 @@ ul {
 
 a {
     text-decoration: none;
-
+    &:hover{
+        text-decoration: none;
+    }
 }
 
 // Typography
@@ -163,8 +165,6 @@ input[type=text] {
 }
 
 .btn-1 {
-    width: 220px;
-    padding: 13.5px 0;
     border-radius: 5px;
     background-color: $primary-2;
     text-transform: uppercase;
@@ -179,8 +179,6 @@ input[type=text] {
     }
 }
 .btn-2 {
-    width: 280px;
-    padding: 13.5px 0;
     border-radius: 5px;
     background-color: $dl-1-1;
     @include font ($base-light, $Poppins-Medium, 14px, 500);
@@ -195,8 +193,6 @@ input[type=text] {
 }
 
 .btn-3 {
-    width: 201px;
-    padding: 13.5px 0;
     border-radius: 5px;
     background-color: $dl-1-1;
     @include font ($base-light, $Poppins-Medium, 14px, 500);
@@ -211,8 +207,6 @@ input[type=text] {
 }
 
 .btn-4 {
-    width: 220px;
-    padding: 13.5px 0;
     border-radius: 5px;
     background-color: $base-light;
     @include font($primary-2, $Poppins-SemiBold, 14px, 600);
@@ -231,8 +225,6 @@ input[type=text] {
 }
 
 .btn-5 {
-    width: 201px;
-    padding: 13.5px 0;
     border-radius: 5px;
     background-color: $base-light;
     @include font($dl-1-1, $Poppins-Medium, 14px, 500);
@@ -250,12 +242,10 @@ input[type=text] {
 }
 
 .btn-1-mb {
-    width: 150px;
-    padding: 8.5px 0;
     border-radius: 5px;
     background-color: $primary-2;
     text-transform: uppercase;
-    @include font($base-light, $Poppins-SemiBold, 14px, 600);
+    @include font($base-light, $Poppins-Medium, 14px, 500);
 
     &:hover {
         background-color: $li-1-2;
@@ -266,14 +256,13 @@ input[type=text] {
     }
 }
 .btn-2-mb {
-    width: 170px;
-    padding: 8.5px 0;
     border-radius: 5px;
     background-color: $dl-1-1;
     @include font ($base-light, $Poppins-Medium, 14px, 500);
+    text-transform: uppercase;
 
     &:hover {
-        background-color: $li-2-1;
+        background-color: $li-1-1;
     }
 
     &.disabled {
@@ -282,8 +271,6 @@ input[type=text] {
 }
 
 .btn-3-mb {
-    width: 150px;
-    padding: 8.5px 0;
     border-radius: 5px;
     background-color: $dl-1-1;
     @include font ($base-light, $Poppins-Medium, 14px, 500);
@@ -298,8 +285,6 @@ input[type=text] {
 }
 
 .btn-4-mb {
-    width: 150px;
-    padding: 8.5px 0;
     border-radius: 5px;
     background-color: $base-light;
     @include font($primary-2, $Poppins-SemiBold, 14px, 600);
@@ -318,8 +303,6 @@ input[type=text] {
 }
 
 .btn-5-mb {
-    width: 150px;
-    padding: 8.5px 0;
     border-radius: 5px;
     background-color: $base-light;
     @include font($dl-1-1, $Poppins-Medium, 14px, 500);
@@ -335,3 +318,4 @@ input[type=text] {
         border: none;
     }
 }
+
