@@ -170,7 +170,7 @@ p {
     background-color: $primary-2;
     text-transform: uppercase;
     @include font($base-light, $Poppins-SemiBold, 14px, 600);
-
+    transition: all .3s ease-in-out;
     &:hover {
         background-color: $li-1-2;
     }
@@ -183,9 +183,10 @@ p {
     border-radius: 5px;
     background-color: $dl-1-1;
     @include font ($base-light, $Poppins-Regular, 14px, 400);
+    transition: all .3s ease-in-out;
 
     &:hover {
-        background-color: $li-2-1;
+        background-color: $li-1-1;
     }
 
     &.disabled {
@@ -197,6 +198,7 @@ p {
     border-radius: 5px;
     background-color: $dl-1-1;
     @include font ($base-light, $Poppins-Medium, 14px, 500);
+    transition: all .3s ease-in-out;
 
     &:hover {
         background-color: $li-2-1;
@@ -213,6 +215,8 @@ p {
     @include font($primary-2, $Poppins-SemiBold, 14px, 600);
     border: 1px solid $primary-2;
     text-transform: uppercase;
+    transition: all .3s ease-in-out;
+
     &:hover {
         background-color: $li-1-2;
         color: $base-light;
@@ -230,6 +234,8 @@ p {
     background-color: $base-light;
     @include font($dl-1-1, $Poppins-Medium, 14px, 500);
     border: 1px solid $dl-1-1;
+    transition: all .3s ease-in-out;
+
     &:hover {
         background-color: $li-2-1;
         color: $base-light;

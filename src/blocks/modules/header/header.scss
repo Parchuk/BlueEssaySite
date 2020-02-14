@@ -242,8 +242,7 @@ header .container-fluid {
         min-width: 100px;
         text-align: center;
         transition: all .3s ease-in-out;
-
-        @media(max-width: 768px) {
+        @media(max-width: 767px) {
             padding: 4.5px 0;
             min-width: 70px;
         }
