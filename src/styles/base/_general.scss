@@ -8,6 +8,7 @@ h5,
 h6,
 ul,
 li,
+span,
 article,
 section,
 aside,
@@ -94,7 +95,7 @@ p {
     padding: 17px 59px 12px 33px;
 }
 
-input[type=text] {
+.input{
     @include font($dl-1-1, $Poppins-Regular, 13px, 400);
     color: $primary-4;
     width: 320px;
@@ -181,7 +182,7 @@ input[type=text] {
 .btn-2 {
     border-radius: 5px;
     background-color: $dl-1-1;
-    @include font ($base-light, $Poppins-Medium, 14px, 500);
+    @include font ($base-light, $Poppins-Regular, 14px, 400);
 
     &:hover {
         background-color: $li-2-1;

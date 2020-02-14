@@ -1,3 +1,7 @@
+header{
+    position: relative;
+    z-index: 1;
+}
 header .container-fluid {
     .row {
         justify-content: space-between;
@@ -67,6 +71,7 @@ header .container-fluid {
                 &:hover .drop {
                     height: 120px;
                     opacity: 1;
+                    pointer-events: all;
                 }
             }
 
@@ -95,9 +100,16 @@ header .container-fluid {
                 width: 150px;
                 transition: all .3s ease-in-out;
                 @include font($base-light, $Poppins-Regular, 13px, 500);
-
             }
-
+            .drop-menu{
+                background-color:$primary-1;
+                width: 140px;
+                padding:10px 20px;
+                left: -20px;
+                opacity: 0;
+                pointer-events: none;
+                box-shadow: 0 3px 5px 0.5px $primary-3;
+            }
             li a {
                 @include font($base-light, $Poppins-Regular, 13px, 500);
                 text-transform: uppercase;
