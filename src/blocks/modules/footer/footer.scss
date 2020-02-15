@@ -1,0 +1,200 @@
+footer {
+    .container-fluid {
+
+        .text-footer,
+        .row:first-of-type {
+            border-bottom: 1px solid $li-1-1;
+        }
+
+        background-color: $primary-1;
+
+        .logo-container {
+            padding: 18px 0 25px 0;
+
+            .logo {
+                margin-right: 8px;
+                font-size: 0;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            display: flex;
+            @include font($base-light, $Gabriola, 39px, 400);
+
+            .logo-text span:first-of-type {
+                span:first-of-type {
+                    @include font($primary-3, $Poppins-Regular, 20px, 400);
+                    text-transform: uppercase;
+                }
+
+                span:last-of-type {
+                    @include font($base-light, $Poppins-Light, 13px, 300);
+                }
+            }
+
+            .logo-text span:last-of-type {
+                letter-spacing: 0.26px;
+                @include font($base-light, $Open-Sans-regular, 13px, 400);
+
+            }
+
+            .logo-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                line-height: 1;
+            }
+        }
+
+        .menu-footer {
+            @media(max-width:991px) {
+                padding: 20px 15px;
+
+            }
+
+            @media(max-width:575px) {
+                flex-direction: column;
+
+                a {
+                    @include font($base-light, $Poppins-Regular, 20px, 400);
+                }
+            }
+
+            a {
+                letter-spacing: 0.24px;
+                transition: all .3s ease-in-out;
+                @include font($base-light, $Poppins-Medium, 12px, 500);
+
+                &:hover {
+                    color: $primary-3;
+                }
+            }
+        }
+
+        .text-footer {
+            padding: 50px 0 50px 0;
+
+            div {
+                padding: 0 90px 0 0;
+            }
+
+            h6 {
+                @include font($base-light, $Poppins-Medium, 16px, 500);
+                padding-bottom: 18px;
+            }
+
+            p {
+                @include font($base-light, $Poppins-Regular, 13px, 400);
+                line-height: 28px;
+            }
+        }
+
+        .footer-contact {
+            padding: 42px 0 45px 0;
+
+            @media(max-width:575px) {
+                padding: 0 0 20px 0;
+            }
+
+            &>div:first-of-type {
+                @media(max-width:991px) {
+                    text-align: center;
+                    order: 2;
+                }
+
+            }
+
+            p {
+                line-height: 21px;
+                @include font($base-light, $Museo-Sans-medium, 13px, 500);
+
+                span {
+                    @include font ($base-light, $Myriad-Pro, 13px, 400);
+                }
+            }
+
+            .icon-container {
+                justify-content: space-between;
+                padding-right: 80px;
+                display: flex;
+
+                @media(max-width:991px) {
+                    padding-right: 20px;
+                    max-width: 250px;
+                    margin: 30px auto;
+                    order: 1;
+                }
+                @media(max-width:575px) {
+                    padding: 0;
+                }
+
+                span {
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                    border: 1.5px $base-light solid;
+                    transition: all .3s ease-in-out;
+
+                    i {
+                        font-size: 18px;
+                        color: $base-light;
+                        cursor: pointer;
+                        transition: all .3s ease-in-out;
+                    }
+                }
+
+                span:hover {
+                    border-color: $dl-2-1;
+
+                    i {
+                        color: $dl-2-1;
+                    }
+                }
+            }
+
+            .phone-namber {
+                @media(max-width:991px) {
+                    justify-content: center;
+                }
+
+                div {
+                    margin: auto 0;
+                    padding-right: 20px;
+                }
+
+                &>span:last-of-type {
+                    @include font ($base-light, $Poppins-Regular, 13px, 400);
+
+                    span {
+                        @include font ($base-light, $Poppins-Medium, 16px, 500);
+                        line-height: 26px;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+
+            .email {
+                @media(max-width:991px) {
+                    justify-content: center;
+                }
+
+                div {
+                    margin: auto 0;
+                    padding-right: 20px;
+                }
+
+                &>span:last-of-type {
+                    @include font ($base-light, $Poppins-Regular, 13px, 400);
+
+                }
+            }
+        }
+    }
+
+}

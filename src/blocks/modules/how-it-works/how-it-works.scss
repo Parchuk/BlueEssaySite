@@ -1,0 +1,94 @@
+.how-it-works{
+    padding-bottom: 97px;
+    @media(max-width: 767px){
+        padding-bottom: 47px; 
+        }
+    .container-img{
+        text-align: center;
+    }
+    .content-how-it-works{
+        padding: 0 30px;
+    }
+    h6{
+    @include font($dl-1-1, $Poppins-Regular, 15px, 400);
+    padding: 87px 0 25px 0;
+    @media(max-width: 767px){
+        padding: 50px 0 20px 0;  
+        }
+    }
+    h1{
+    @include font ($dl-2-4, $Poppins-Medium, 33px, 500);
+    padding-bottom: 55px;
+    text-align: center;
+    @media(max-width: 767px){
+    padding-bottom: 0;  
+    }
+    }
+    .content-how-it-works:nth-of-type(2) span::before{
+        @media(max-width: 991px){
+            display: none;
+        }
+    }
+    .content-how-it-works:last-of-type span::before{
+        display: none;
+    }
+    span{
+        padding: 20px 0 5px 0;
+        display: block;
+        text-align: center;
+    @include font($dl-2-4, $Poppins-SemiBold, 17px, 600);
+    text-transform: uppercase;
+    position: relative;
+    &::before{
+        content: "";
+        display: block;
+        height: 180px;
+        width: 2px;
+        background-color: $li-2-1;
+        position: absolute;
+        top: -60px;
+        right: -30px;
+        @media(max-width: 575px){
+            display: none;
+        }
+    }
+    }
+    p{
+    @include font($dl-1-4, $Poppins-Regular, 13px, 400);
+    line-height: 20px;
+    text-align: center;
+    }
+    .content-how-it-works{
+        i{
+            position: absolute;
+            display: block;
+            width: 4px;
+            background-color:$base-light;
+            height: 25px;
+            bottom: 50%;
+            right: -1px;
+            @media(max-width: 575px){
+                display: none;
+            }
+        }
+        position: relative;
+        i::after,
+        i::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 2px;
+            height: 20px;
+            background-color:$li-2-1;
+            right: -6px;
+            top: 10%;
+            
+        }
+        i::after{
+            transform: translate(0, 6px)rotate(45deg);
+        }
+        i::before{
+            transform: translate(0, -6px) rotate(-45deg);
+        }
+    }
+}

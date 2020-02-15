@@ -266,6 +266,9 @@ header .container-fluid {
     input:checked~.dropdown {
         top: 50px;
         width: 160px;
+        @media (min-width:768px) {
+        top: 65px;
+        }
     }
 
     .visuallyHidden {
