@@ -212,7 +212,7 @@ p {
 .btn-4 {
     border-radius: 5px;
     background-color: $base-light;
-    @include font($primary-2, $Poppins-SemiBold, 14px, 600);
+    @include font($dl-1-4, $Poppins-SemiBold, 35px, 600);
     border: 1px solid $primary-2;
     text-transform: uppercase;
     transition: all .3s ease-in-out;

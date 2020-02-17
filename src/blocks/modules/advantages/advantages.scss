@@ -3,11 +3,13 @@
     background-color: $primary-1;
     background-image: url(../../../img/advantages-Bg.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-
+    background-position: -80px;
+    @media (max-width:767px){
+    background-size: 90% 50%;
+    }
     @media (max-width:767px) {
         padding: 25px 0 30px 0;
-
+        background-position: 0;
     }
 
     h6 {

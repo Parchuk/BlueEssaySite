@@ -1,0 +1,109 @@
+.slider {
+    padding: 45px 0 55px 0;
+
+    @media (max-width: 767px) {
+        padding: 20px 0 25px 0;
+
+    }
+
+    text-align: center;
+
+    .carousel-item {
+        h6 {
+            @include font($dl-1-1, $Poppins-Regular, 15px, 400);
+        }
+
+        h3 {
+            @include font ($dl-3-4, $Poppins-Medium, 33px, 500);
+            padding: 23px 0 38px 0;
+
+            @media (max-width: 767px) {
+                padding: 10px 0 20px 0;
+                @include font ($dl-3-4, $Poppins-Medium, 25px, 500);
+
+            }
+        }
+
+        p {
+            @include font($dl-1-4, $Poppins-Light, 14px, 300);
+            line-height: 22px;
+            padding: 20px 250px;
+
+            @media (max-width: 1200px) {
+                padding: 20px 180px;
+            }
+
+            @media (max-width: 991px) {
+                padding: 20px 120px;
+            }
+
+            @media (max-width: 575px) {
+                padding: 15px 50px;
+                line-height: 18px;
+                @include font($dl-1-4, $Poppins-Light, 12px, 300);
+
+            }
+        }
+
+        span:first-of-type {
+            @include font($dl-1-1, $Poppins-SemiBold, 17px, 700);
+            display: block;
+
+            @media (max-width: 767px) {
+                @include font($dl-1-1, $Poppins-SemiBold, 14px, 700);
+            }
+        }
+
+        .date {
+            @include font($li-1-4, $Poppins-Light, 13px, 300);
+            display: block;
+            padding-top: 12px;
+
+            @media (max-width: 767px) {
+                padding-top: 7px;
+
+            }
+        }
+
+        .container-img {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0;
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            background-color: $primary-3;
+        }
+    }
+
+    .carousel-item:nth-of-type(2) {
+        .container-img {
+            background-color: $primary-1;
+        }
+    }
+
+    .carousel-item:nth-of-type(3) {
+        .container-img {
+            background-color: $primary-2;
+        }
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        color: $primary-1;
+        font-size: 50px;
+
+        @media (max-width: 575px) {
+            font-size: 30px;
+        }
+    }
+
+    a {
+        @media (max-width: 575px) {
+            width: 30px;
+        }
+    }
+}
+

@@ -1,11 +1,36 @@
 .banner {
-    background-image: url('../../../img/bg-baner.png');
+    background-image: url(../../../img/bg-baner.png);
+    position: relative;
     background-repeat: no-repeat;
     background-size: 100% 93%;
 
-    @media(max-width:767px) {
-        background-image: url('../../../img/banner-bg-md.png');
-
+    @media(max-width:991px) {
+        background-image: url(../../../img/banner-bg-md.png);
+        .cloud-1,
+        .cloud-2,
+        .cloud-3{
+        position: absolute;
+        }
+        .cloud-1{
+            top: 50px;
+            right: 50px;
+        }
+        .cloud-2{
+            top: 30px;
+            left: 20px;
+            @media(max-width:412px){
+            top: 140px;
+            left: 50px;
+            }
+        }
+        .cloud-3{
+            top: 220px;
+             left: 400px; 
+             @media(max-width:575px){
+             left: 180px; 
+             top: 20px;
+             }       
+            }
     }
 
     .text-banner {
@@ -239,3 +264,4 @@
     }
 
 }
+

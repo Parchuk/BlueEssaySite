@@ -1,0 +1,292 @@
+main {
+    position: relative;
+    z-index: 5;
+
+    .container-fluid {
+        position: relative;
+        padding-top: 50px;
+        background-image: url(../../../img/bd-diskount.png);
+        background-size: 100% 70%;
+        background-repeat: no-repeat;
+
+        @media (max-width:991px) {
+            background-image: url(../../../img/bd-diskount-md.png);
+        }
+
+        .container {
+            position: relative;
+            z-index: 3;
+        }
+
+        .cloud,
+        .rocket,
+        .clouds {
+            display: flex;
+            position: absolute;
+            z-index: 1;
+
+            @media (max-width:1200px) {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        .clouds {
+            right: 40px;
+        }
+
+        .cloud {
+            left: 105px;
+        }
+
+        .rocket {
+            left: 50px;
+            top: 150px;
+            width: 100px;
+
+            @media (max-width:1200px) {
+                width: 170px;
+            }
+        }
+
+        .row:first-of-type {
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            h6 {
+                @include font($base-light, $Poppins-Regular, 15px, 400);
+                background-color: $primary-1;
+            }
+
+            h3 {
+                @include font ($base-light, $Poppins-Medium, 33px, 500);
+                padding: 10px 0 25px 0;
+                background-color: $primary-1;
+                text-align: center;
+
+            }
+
+            p {
+                text-align: center;
+                @include font ($base-light, $Poppins-Regular, 20px, 400);
+                line-height: 30px;
+                padding: 0 190px;
+
+                @media (max-width:1200px) {
+                    line-height: 20px;
+                    @include font ($base-light, $Poppins-Regular, 17px, 400);
+                }
+
+                @media (max-width:767px) {
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    .row:nth-of-type(2)>div>div:nth-of-type(1) div:nth-of-type(1)>div {
+        border-bottom: 1px solid $li-2-4;
+    }
+
+    .row:nth-of-type(2)>div>div>div>div:nth-of-type(1) {
+        border-right: 1px solid $li-2-4;
+    }
+
+    .discount-content {
+        padding: 35px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width:991px) {
+            padding: 15px;
+        }
+
+        @media (max-width:350px) {
+            padding: 5px
+        }
+
+        span:nth-of-type(1) {
+            line-height: 40px;
+            text-transform: uppercase;
+            @include font($primary-2, $Poppins-SemiBold, 35px, 600);
+
+            @media (max-width:991px) {
+                line-height: 30px;
+                @include font($primary-2, $Poppins-SemiBold, 30px, 600);
+            }
+        }
+
+        span:nth-of-type(2) {
+            @include font ($dl-1-4, $Poppins-Regular, 14px, 400);
+            padding: 15px 0 5px 0;
+
+            @media (max-width:991px) {
+                padding: 5px 0 5px 0;
+            }
+        }
+
+        span:nth-of-type(3) {
+            @include font($primary-1, $Poppins-SemiBold, 17px, 600);
+            cursor: pointer;
+
+        }
+    }
+
+    .row:nth-of-type(2) {
+        &>div {
+            box-shadow: 0 6px 30px rgba(202, 202, 202, 0.75);
+        }
+
+        padding-top: 60px;
+        justify-content: center;
+
+        @media (max-width:991px) {
+            padding-top: 30px;
+        }
+
+        &>div>div:first-of-type {
+            background-color: $base-light;
+            padding: 50px 50px 0 50px;
+            text-align: center;
+
+            @media (max-width:1200px) {
+                padding: 40px 35px 0 35px;
+            }
+
+            @media (max-width:991px) {
+                padding: 25px;
+            }
+        }
+    }
+
+    .row:nth-of-type(2)>div>div:nth-of-type(2) {
+        background-color: $primary-1;
+        padding: 20px;
+
+        &>div {
+            padding: 30px 40px;
+            border: 2px dashed $dl-1-1;
+            border-radius: 30px;
+            height: 100%;
+
+            @media (max-width:991px) {
+                padding: 10px 20px;
+            }
+
+            @media (max-width:350px) {
+                padding: 5px 10px;
+            }
+
+            h5 {
+                text-align: center;
+                @include font($base-light, $Poppins-SemiBold, 25px, 600);
+                letter-spacing: 0.25px;
+                text-transform: uppercase;
+                line-height: 34px;
+                padding-bottom: 30px;
+
+                @media (max-width:1200px) {
+                    @include font($base-light, $Poppins-SemiBold, 23px, 600);
+                    line-height: 25px;
+
+                }
+
+                @media (max-width:991px) {
+                    padding: 15px 0;
+                    @include font($base-light, $Poppins-SemiBold, 20px, 600);
+
+                }
+            }
+
+            &>div {
+
+                .scissors,
+                .stars,
+                .balloon {
+                    position: absolute;
+                    font-size: 0;
+                }
+
+                .scissors {
+                    left: -13px;
+                    top: -15px;
+                }
+
+                .stars {
+                    right: -15px;
+                    top: -15px;
+                }
+
+                .balloon {
+                    bottom: -105px;
+                    right: -95px;
+                }
+
+                position: relative;
+                border-radius: 0 0 15px 15px;
+                border: 2px dashed $base-light;
+                background-color: $dl-1-1;
+                padding: 20px 40px;
+
+                @media (max-width:1200px) {
+                    padding: 10px 40px;
+                }
+
+                span {
+                    display: block;
+                }
+
+                span:nth-of-type(1) {
+                    @include font($base-light, $Poppins-Regular, 24px, 400);
+                    line-height: 40px;
+                    letter-spacing: -0.48px;
+
+                    @media (max-width:1200px) {
+                        @include font($base-light, $Poppins-Regular, 20px, 400);
+                    }
+                }
+
+                span:nth-of-type(2) {
+                    line-height: 57px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    @include font(#e2f55d, $Poppins-SemiBold, 62px, 400);
+
+                    @media (max-width:1200px) {
+                        @include font(#e2f55d, $Poppins-SemiBold, 52px, 400);
+                        line-height: 45px;
+
+                    }
+                }
+
+                span:nth-of-type(3) {
+                    text-align: center;
+                    @include font($base-light, $Poppins-Regular, 14px, 400);
+                    line-height: 22px;
+                }
+            }
+
+            &>span {
+                display: block;
+                text-align: center;
+                @include font($base-light, $Open-Sans-italic, 18px, 300);
+                line-height: 23px;
+                padding-top: 50px;
+
+                @media (max-width:350px) {
+                    padding-top: 20px;
+
+                }
+
+                span {
+                    @include font($base-light, $Open-Sans-bold, 18px, 400);
+
+                }
+            }
+        }
+    }
+}
