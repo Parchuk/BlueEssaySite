@@ -75,6 +75,9 @@
 
         p {
             line-height: 22px;
+            @media(max-width:767px){
+            text-align: justify;
+            }
         }
 
         p:last-of-type {
