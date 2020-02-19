@@ -332,6 +332,7 @@
         padding: 9.5px 0;
     }
 
+  @media (min-width:991px) {
     #row:checked~.row-1,
     #row:checked~.row-2,
     #row:checked~.row-3 {
@@ -340,7 +341,6 @@
         margin: auto;
         padding: 10px;
         margin-bottom: 40px;
-
         &>div:last-of-type {
 
             p,
@@ -377,6 +377,7 @@
 
         }
     }
+  }
 
     #row:checked~span {
         label:last-of-type {
